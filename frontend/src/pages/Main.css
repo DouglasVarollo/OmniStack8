@@ -6,11 +6,11 @@
 }
 
 .main-container ul {
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   margin-top: 50px;
-  list-style-type: none;
 }
 
 .main-container ul li {
@@ -25,55 +25,61 @@
 
 .main-container ul li footer {
   flex: 1;
+  background: var(--card-color);
+  border: 1px solid var(--border);
   padding: 15px 20px;
-  border-radius: 0 0 5px 5px;
-  background-color: #fff;
-  border: 1px solid #eee;
   text-align: left;
+  border-radius: 0 0 5px 5px;
 }
 
 .main-container ul li footer strong {
-  color: #333;
   font-size: 16px;
+  color: var(--primary-color);
+}
+
+.main-container ul li footer span {
+  font-size: 13px;
+  color: var(--third-color);
+  margin-top: 5px;
 }
 
 .main-container ul li footer p {
-  margin-top: 5px;
-  color: #999;
   font-size: 14px;
   line-height: 20px;
+  color: var(--secondary-color);
+  margin-top: 5px;
 }
 
 .main-container ul li .buttons {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  margin-top: 10px;
 }
 
 .main-container ul li .buttons button {
   height: 50px;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 0;
+  border-radius: 4px;
+  background: var(--card-color);
   cursor: pointer;
 }
 
-.main-container ul li .buttons button:hover {
+.main-container ul li .buttons button:hover img {
   transform: translateY(-5px);
   transition: all 0.2s;
 }
 
 .main-container .empty {
-  margin-top: 300px;
-  color: #999;
   font-size: 32px;
+  color: #999;
   font-weight: bold;
+  margin-top: 300px;
 }
 
 .match-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -82,36 +88,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .match-container .avatar {
   width: 200px;
   height: 200px;
-  margin: 30px 0;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 5px solid #FFF;
+  margin: 30px 0;
 }
 
 .match-container strong {
-  color: #FFF;
   font-size: 32px;
+  color: #FFF;
 }
 
 .match-container p {
-  max-width: 400px;
   margin-top: 10px;
-  color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
   line-height: 30px;
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .match-container button {
-  margin-top: 30px;
-  color: rgba(255, 255, 255, 0.8);
-  background: none;
   border: 0;
+  background: none;
   font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
+  margin-top: 30px;
   cursor: pointer;
 }

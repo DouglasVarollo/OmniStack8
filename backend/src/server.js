@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv").config();
 
 const routes = require("./routes");
 
@@ -16,8 +17,9 @@ io.on("connection", socket => {
   connectedUsers[user] = socket.id;
 });
 
-mongoose.connect("mongodb://localhost:27017/omnistack8", {
-  useNewUrlParser: true
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 app.use((req, res, next) => {
